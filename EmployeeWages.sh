@@ -1,10 +1,18 @@
 #!/bin/bash -x
 echo "========Welcome to employee wage calculation========= "
 number=$((RANDOM%2))
+isFullTime=1
+WagePerHr=20
 
-if(($number==1))
+
+if(($number==$isFullTime))
 then
-	echo "Employee Present"
+        emphr=8
 else
-	echo "Employee Absent"
+        emphr=0
 fi
+salary=$(($WagePerHr*$emphr))
+echo "Salary: $salary"
+
+
+
