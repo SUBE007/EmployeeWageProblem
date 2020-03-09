@@ -1,13 +1,15 @@
 #!/bin/bash -x
 echo "========Welcome to employee wage calculation========= "
-number=$((RANDOM%2))
-isFullTime=1
+number=$((RANDOM%3))
+isFullTime=2
+isPartTime=1
 WagePerHr=20
-
-
 if(($number==$isFullTime))
-then
+ then
         emphr=8
+elif(($number==$isPartTime))
+ then
+        emphr=4
 else
         emphr=0
 fi
